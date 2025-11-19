@@ -1,0 +1,10 @@
+Summary of what I changed and why: 
+
+I changed the shopping time to be 30 seconds per item if the customer bought 20 items or more, and one minute per item if the customer bought less than 20 items. From my experience shopping, the more items I need to get the less time it takes per item because there's usually more overlap between where the items are located. 
+I changed the checkout time to be one minute per 15 items but I set the minimum time to 3 minutes because I think the longest part of checking out items is paying, which doesn't change much based on the number of items you bought. 
+I added more random variables to the number of people arriving to the store at any given time. Every 1 to 3 minutes, a random number of customers will arrive between 2 to 6 people. 
+I changed the number of checkers to 3. My goal was to minimize the amount of idle time while never having customers wait longer than 3 minutes. After running a number of trials, this number seemed to best achieve that goal. I started by giving my code an infinite number of checkers and ran some simulations to see how long checkout took, on average, when there was no queue. I found the answer to be ~5 minutes. With that information, I ran multiple tests to find the ideal number of checkers to keep the time from going above 8 minutes.
+I added a print function to tell me the average number of items that were purchased.
+I also commented out the length of the queue once establishing through trial runs that it was consistently between 0-2 people. 
+
+Overall, one thing I learned from this simulation is that no matter what values I put in the varying categories, there is always an "ideal" number of checkers. This is usually the point when you still have some idle time, but the wait time drops significantly, and then stabilizes when you continue adding more checkers. 
